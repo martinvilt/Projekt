@@ -69,28 +69,29 @@ public class Kiirus {
         this.aeg = aeg;
     }
 
-    void kiirenduseLeidmine(){
+    public double kiirenduseLeidmine(){
 
-        kiirendus = jõud/mass;
+        return kiirendus = jõud/mass;
     }
 
-    void teepikkuseLeidmine(){
+    public double teepikkuseLeidmine(){
 
-        teepikkus = kiirus*aeg;
+        return teepikkus = kiirus*aeg;
     }
-    void ajaLeidmine(){
-        aeg = teepikkus/kiirus;
+    public double ajaLeidmine(){
+        return aeg = teepikkus/kiirus;
     }
-    void kiiruseLeidmine(){
-        kiirus = teepikkus/aeg;
-    }
-
-    void teepikkusLedimineKiirendusega(){
-
-        teepikkus = (kiirendus*Math.pow(aeg,2))/2;
+    public double kiiruseLeidmine(){
+        return kiirus = teepikkus/aeg;
     }
 
-    void teepikkuseLeidmineJõuga(){
-        teepikkus = (jõud*Math.pow(aeg,2))/(2*mass);
+    public double teepikkusLedimineKiirendusega(){
+
+        return teepikkus = (kiirendus*Math.pow(aeg,2))/2;
+    }
+
+    public double teepikkuseLeidmineJõuga(){
+
+        return teepikkus = (jõud*Math.pow(aeg,2))/(2*mass);
     }
 }

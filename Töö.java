@@ -1,24 +1,14 @@
 public class Töö {
-    private double töö;
     private double jõud;
     private double teepikkus;
     private double aeg;
     private double mass;
 
-    public Töö(double töö, double jõud, double teepikkus, double aeg, double mass) {
-        this.töö = töö;
+    public Töö(double jõud, double teepikkus, double aeg, double mass) {
         this.jõud = jõud;
         this.teepikkus = teepikkus;
         this.aeg = aeg;
         this.mass = mass;
-    }
-
-    public double getTöö() {
-        return töö;
-    }
-
-    public void setTöö(double töö) {
-        this.töö = töö;
     }
 
     public double getJõud() {
@@ -53,10 +43,10 @@ public class Töö {
         this.mass = mass;
     }
 
-    void tööLeidmineTeepikkusega(){
-        töö = jõud*teepikkus;
+    public double tööLeidmineTeepikkusega(){
+        return Math.round((jõud*teepikkus)*100.0)/100.0;
     }
-    void tööLeidmineMassiga(){
-        töö = (Math.pow((jõud*aeg),2))/(2*mass);
+    public double tööLeidmineMassiga(){
+      return Math.round(((Math.pow((jõud*aeg),2))/(2*mass))*100.0)/100.0;
     }
 }

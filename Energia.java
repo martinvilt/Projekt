@@ -1,23 +1,13 @@
 public class Energia {
-    private double impulss;
     private double mass;
     private double kiirus;
     private double kõrgus;
-    private double energia;
-    private double kineetilineEnergia;
-    private double potentsiaalneEnergia;
-    private double energiaJäävus;
     private double raskusjõud;
 
-    public Energia(double impulss, double mass, double kiirus, double kõrgus, double energia, double kineetilineEnergia, double potentsiaalneEnergia, double energiaJäävus, double raskusjõud) {
-        this.impulss = impulss;
+    public Energia(double mass, double kiirus, double kõrgus, double raskusjõud) {
         this.mass = mass;
         this.kiirus = kiirus;
         this.kõrgus = kõrgus;
-        this.energia = energia;
-        this.kineetilineEnergia = kineetilineEnergia;
-        this.potentsiaalneEnergia = potentsiaalneEnergia;
-        this.energiaJäävus = energiaJäävus;
         this.raskusjõud = raskusjõud;
     }
 
@@ -27,14 +17,6 @@ public class Energia {
 
     public void setRaskusjõud(double raskusjõud) {
         this.raskusjõud = raskusjõud;
-    }
-
-    public double getImpulss() {
-        return impulss;
-    }
-
-    public void setImpulss(double impulss) {
-        this.impulss = impulss;
     }
 
     public double getMass() {
@@ -61,52 +43,20 @@ public class Energia {
         this.kõrgus = kõrgus;
     }
 
-    public double getEnergia() {
-        return energia;
+    public double kineetiliseEnergiaLeidmine() {
+
+        return Math.round((mass * Math.pow(kiirus, 2))*100.0)/100.0;
     }
 
-    public void setEnergia(double energia) {
-        this.energia = energia;
+    public double potentsiaalseEnergiaLeidmine() {
+
+        return Math.round((mass * raskusjõud * kõrgus)*100.0)/100.0;
     }
 
-    public double getKineetilineEnergia() {
-        return kineetilineEnergia;
+    public double impulsiLeidmine() {
+        return Math.round((mass * kiirus)*100.0)/100.0;
     }
-
-    public void setKineetilineEnergia(double kineetilineEnergia) {
-        this.kineetilineEnergia = kineetilineEnergia;
-    }
-
-    public double getPotentsiaalneEnergia() {
-        return potentsiaalneEnergia;
-    }
-
-    public void setPotentsiaalneEnergia(double potentsiaalneEnergia) {
-        this.potentsiaalneEnergia = potentsiaalneEnergia;
-    }
-
-    public double getEnergiaJäävus() {
-        return energiaJäävus;
-    }
-
-    public void setEnergiaJäävus(double energiaJäävus) {
-        this.energiaJäävus = energiaJäävus;
-    }
-
-    void kineetiliseEnergiaLeidmine(){
-
-        kineetilineEnergia = (mass*Math.pow(kiirus,2));
-    }
-
-    void potentsiaalseEnergiaLeidmine(){
-
-        potentsiaalneEnergia = mass * raskusjõud * kõrgus;
-    }
-
-    void impulsiLeidmine(){
-        impulss = mass * kiirus;
-    }
-    void energiajäävuseLeidmine(){
-        energiaJäävus = potentsiaalneEnergia + kineetilineEnergia;
+    public double energiajäävuseLeidmine(){
+        return potentsiaalseEnergiaLeidmine() + kineetiliseEnergiaLeidmine();
     }
 }
