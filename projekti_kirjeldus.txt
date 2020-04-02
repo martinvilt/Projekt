@@ -1,0 +1,16 @@
+﻿Autorid on Martin Vilt ja Aksel Õim
+
+Programmi eesmärk on arvutada erinevaid füüsikalisi suuruseid, näiteks: töö, kiirus, teepikkus. Arvutada erinevaid väärtusi, kui on näiteks kasutatud multimeetrit või tahetakse leida määramatusi või lihtsalt tutvuda erinevate füüsika valemite ja suurustega.
+
+Energia klassi põhiülesanne on arvutada kineetiline ja potentsiaalne energia. Kiiruse klassi ülesanne on leida kiirus ja kiirendus kasutades teepikkust, aega ja teistel juhtudel kasutades jõudu.
+Määramatust kasutatakse selleks, et arvutada mõõtemääramatusi, mis on saadud kasutades multimeetrit või teisi mõõtmisriistu kasutades.
+Ohmi seaduse klassi kasutatakse takistuse, pinge või voolutugevuse arvutamiseks.
+Teisendaja klass on selleks, et saadud tulemused teisendada erinevateks suurusteks.
+Töö klass on töö arvutamiseks kasutades erinevaid suurusi.
+Võimsuse klass on leida võimsus liikuvale kehale või lihtsalt võimsuse arvutamiseks.
+Projekt oli jagatud 4 etapiks. I etapp oli erinevate valemite otsimine ja nende implementeerimine programmi. II etapp oli saada tööle mõõtühikute teisendamine. III etapp oli teha suurusjärkude teisendamine.
+Töö tehti etappide järjekorras.
+
+Martin tegi klassid:  Määramtused, OhmiSeadus, Teisendaja ja Võimsus.
+Aksel tegi klassid: Energia, Kiirus, Töö ja tutvustuse.
+
